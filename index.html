@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Lab Order Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        label {
+            font-weight: bold;
+            color: #1e3c72;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        .product {
+            border: 1px solid #dcdcdc;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .submit-btn {
+            background: #1e3c72;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #2a5298;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <audio autoplay loop>
+        <source src="music2.mp3" type="audio/mpeg">
+    </audio>
+
+<div class="container">
+    <h2>Print Lab Order Form</h2>
+
+    <form>
+
+        <label>Full Name</label>
+        <input type="text" name="fullname" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Delivery Address</label>
+        <textarea name="address" rows="3" required></textarea>
+
+        <label>Select Product</label>
+
+        <div class="product">
+            <img src="https://i.imgur.com/pjnQTIH.jpg" alt="" style="width:47%;height:auto;">
+   	    <img src="https://i.imgur.com/zDjbZws.jpg" alt="" style="width:47%;height:auto;">
+            <input type="radio" name="product" value="Stickers"> Stickers
+            <input type="number" name="qty_stickers" placeholder="Quantity">
+        </div>
+
+        <div class="product">
+            <img src="https://i.imgur.com/ww3h3Og.jpg" alt="" style="width:100%;height:auto;">
+            <input type="radio" name="product" value="Tarpaulin"> Tarpaulin
+            <input type="number" name="qty_tarpaulin" placeholder="Quantity">
+        </div>
+
+        <div class="product">
+            <img src="https://i.imgur.com/23ruqmL.jpg" alt="" style="width:100%;height:auto;">
+            <input type="radio" name="product" value="T-Shirt"> T-Shirt
+            <input type="number" name="qty_tshirt" placeholder="Quantity">
+        </div>
+
+        <label>T-Shirt Size (Choose 1)</label>
+        <div class="size-options">
+            <label><input type="radio" name="size" value="Small"> S</label>
+            <label><input type="radio" name="size" value="Medium"> M</label>
+            <label><input type="radio" name="size" value="Large"> L</label>
+            <label><input type="radio" name="size" value="XL"> XL</label>
+        </div>
+
+        <div class="product">
+           <img src="https://i.imgur.com/8gKfuEE.jpg" alt="" style="width:100%;height:auto;">
+            <input type="radio" name="product" value="Banner"> Banner
+            <input type="number" name="qty_banner" placeholder="Quantity">
+        </div>
+
+        <div class="product">
+            <img src="https://i.imgur.com/JEXTCjO.jpg" alt="" style="width:100%;height:auto;">
+            <input type="radio" name="product" value="Invitation Cards"> Invitation Cards
+            <input type="number" name="qty_invitation" placeholder="Quantity">
+        </div>
+
+        <label>Payment Method</label>
+        <select name="payment">
+            <option>Cash on Delivery</option>
+            <option>GCash</option>
+            <option>Credit/Debit Card</option>
+            <option>Print Lab PayLater</option>
+            <option>2nd Option kalang</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Place Order</button>
+
+    </form>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+    <a href="https://raitobazu.github.io/Website/" 
+       style="
+           background-color: #007BFF;
+           color: white;
+           padding: 12px 25px;
+           text-decoration: none;
+           font-size: 16px;
+           border-radius: 6px;
+           font-family: Arial, sans-serif;
+           display: inline-block;
+       ">
+       Back To Main Page
+    </a>
+</div>
+
+
+</body>
+</html>
